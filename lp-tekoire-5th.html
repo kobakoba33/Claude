@@ -122,7 +122,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 @keyframes lpFadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes lpPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.4); } 50% { box-shadow: 0 0 40px 8px rgba(201,168,76,0.15); } }
 @keyframes lpFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes lpBreatheFade { 0%,100%{opacity:0.36}50%{opacity:0.8} }
+@keyframes lpBreatheFade { 0%,100%{opacity:0.4}50%{opacity:0.8} }
 .lp-animate { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .lp-animate.lp-visible { opacity: 1; transform: translateY(0); }
 
@@ -338,15 +338,15 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 @media (max-width: 768px) {
   .lp-results { padding-top: 44px; }
   .lp-hero-scene { padding: 64px 20px 40px; }
-  .lp-hero-badge-new { margin-bottom: 28px; gap: 16px; }
-  .lp-hero-badge-line { width: 40px; }
+  .lp-hero-badge-new { margin-bottom: 40px; gap: 16px; }
   .lp-hl-block { margin-bottom: 40px; }
   .lp-hero-cards { grid-template-columns: 1fr; gap: 16px; max-width: 400px; margin-bottom: 48px; }
   .lp-hero-card-in { padding: 32px 24px 28px; }
+  .lp-hero-sub { margin-bottom: 56px; }
+  .lp-hero-brand-wrap { margin-bottom: 72px; }
   .lp-hero-brand-box { padding: 24px 40px; }
-  .lp-hero-sub { margin-bottom: 32px; }
-  .lp-hero-brand-wrap { margin-bottom: 32px; }
   .lp-hero-arrow-new { margin-top: 40px; }
+  .lp-hero-badge-line { width: 40px; }
   .lp-fr-h { left: 24px; right: 24px; }
   .lp-fr-v { top: 24px; bottom: 24px; }
   .lp-fr-t { top: 24px; } .lp-fr-b { bottom: 24px; }
@@ -355,6 +355,16 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 @media (max-width: 480px) {
   .lp-hl-num { font-size: clamp(28px, 10vw, 42px); }
   .lp-hero-brand-name { letter-spacing: 0.12em; }
+}
+
+/* ===== DESKTOP HERO SPACING ===== */
+@media (min-width: 769px) {
+  .lp-hero-scene { padding: 80px 24px 48px; }
+  .lp-hero-badge-new { margin-bottom: 64px; }
+  .lp-hl-block { margin-bottom: 64px; }
+  .lp-hero-sub { margin-bottom: 48px; }
+  .lp-hero-brand-wrap { margin-bottom: 48px; }
+  .lp-hero-cards { margin: 0 auto 56px; }
 }
 
 /* ===== CLIENT RESULTS ===== */
@@ -623,51 +633,41 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
         <!-- 1. したろうさん -->
         <div class="lp-result-card lp-animate">
           <div class="lp-result-card-head">
-            <img class="lp-result-avatar" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/shitarou.webp" alt="したろうさん">
             <div class="lp-result-meta"><div class="lp-result-name">したろうさん</div><div class="lp-result-tag">30代・会社員</div></div>
           </div>
           <div class="lp-result-body">テコ入れ参加前の月収は<strong>1万円</strong><br><br>毎日ポストして、<br>リプ周りもして、<br>有料記事も出した<br><br>でも売れなかった<br><br>テコ入れで<br>シナリオを設計し直してから、<br>導線が変わり、反応が変わり、<br><strong>月収30万円を達成</strong><br><br>会社員をしながら、<br>シナリオ設計を学び、<br>結果を出した</div>
-          <img class="lp-result-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/shitarou_result.webp" alt="したろうさん実績">
         </div>
 
         <!-- 2. きなこさん -->
         <div class="lp-result-card lp-animate">
           <div class="lp-result-card-head">
-            <img class="lp-result-avatar" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/kinako.webp" alt="きなこさん">
             <div class="lp-result-meta"><div class="lp-result-name">きなこさん</div><div class="lp-result-tag">40代・フリーランス</div></div>
           </div>
           <div class="lp-result-body">テコ入れ参加前の彼女は、<br>スキルがなかったわけじゃない<br><br>商業誌の編集に携わり、<br>ウェブライターとしても活動していた<br><br><strong>「書く力」はすでに持っていた</strong><br><br>でも、<br>ウェブビジネスの世界に参入しても、<br>思うような結果にはつながらなかった<br><br>書けるのに、売れない<br><br>その原因は、<br>スキルではなくシナリオだった<br><br>テコ入れに参加し、<br>シナリオを設計したことで、<br><br>初のローンチにも関わらず、<br>参入からわずか<strong>48時間で<br>181リストを獲得</strong><br><br>1週間で5万円の売上が立ち、<br>オファーから24時間以内に<br><strong>コンサル3名が成約</strong><br><br>「書く力」は最初からあった<br><br>足りなかったのは、<br><strong>届ける順番と届ける構造</strong>だったのだ</div>
-          <img class="lp-result-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/kinako_result.webp" alt="きなこさん実績">
         </div>
 
         <!-- 3. ゆぅさん -->
         <div class="lp-result-card lp-animate">
           <div class="lp-result-card-head">
-            <img class="lp-result-avatar" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/yuu.webp" alt="ゆぅさん">
             <div class="lp-result-meta"><div class="lp-result-name">ゆぅさん</div><div class="lp-result-tag">30代・フリーランス</div></div>
           </div>
           <div class="lp-result-body">テコ入れ参加前は、<br>情報発信の経験すらなかった<br><br>売上ゼロ<br>商品もない<br><br>「自分に何が作れるのか」も<br>わからない状態でのスタートだった<br><br>テコ入れでシナリオを学び、<br>導線を設計し、商品を作った<br><br>リリースから<br>たった<strong>5時間で30部ほど販売</strong><br><br>1日もかかっていない<br><br>その後、<br>コンサルが成約し、<br><strong>月収が30万円を超えた</strong><br><br>未経験から、<br>最短距離で結果を出せた理由は<br>才能ではない<br><br>シナリオを<br>一から構築したからだ</div>
-          <img class="lp-result-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/yuu_result.webp" alt="ゆぅさん実績">
         </div>
 
         <!-- 4. かなでさん -->
         <div class="lp-result-card lp-animate">
           <div class="lp-result-card-head">
-            <img class="lp-result-avatar" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/kanade.webp" alt="かなでさん">
             <div class="lp-result-meta"><div class="lp-result-name">かなでさん</div><div class="lp-result-tag">30代・会社員</div></div>
           </div>
           <div class="lp-result-body">テコ入れ参加後、<br>初のローンチで<strong>30万円が着金</strong><br><br>さらに12万円の<br>個別サポートも成約し、<br>その月の月収は<strong>60万円</strong><br><br>会社員の給料を、<br>副業が追い抜いた瞬間だった<br><br>今ではココナラ最高ランクの<br><strong>プラチナを半年以上維持</strong><br><br>本業の合間に作った仕組みが、<br>本業を超える収益を生み続けている</div>
-          <img class="lp-result-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/kanade_result.webp" alt="かなでさん実績">
         </div>
 
         <!-- 5. スイさん -->
         <div class="lp-result-card lp-animate">
           <div class="lp-result-card-head">
-            <img class="lp-result-avatar" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/sui.webp" alt="スイさん">
             <div class="lp-result-meta"><div class="lp-result-name">スイさん</div><div class="lp-result-tag">20代・フリーランス</div></div>
           </div>
           <div class="lp-result-body">テコ入れ参加前から、<br>彼女には<br>自分のクライアントがいた<br><br>でも、<br>そのクライアントの収益が伸びない<br><br>教え方が悪いのか<br>内容が足りないのか<br><br>答えが見つからないまま、<br>自分自身の収益にも<br>限界を感じていた<br><br>テコ入れに参加し、<br>シナリオ設計を<br>自分の指導に組み込んだ<br><br>その結果、<br>わずか<strong>2週間で<br>自分の最高収益を更新</strong><br><br>さらに、<br>伸び悩んでいたクライアントの<br><strong>最高収益まで更新させた</strong>のだ<br><br>自分が稼ぐだけじゃなく、<br>人を稼がせる力まで手に入れた<br><br>20代で「教える側の壁」を<br>突破できた理由は、<br>シナリオという<br>再現性のある武器を手にしたから</div>
-          <img class="lp-result-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/sui_result.webp" alt="スイさん実績">
         </div>
 
       </div>
@@ -741,7 +741,6 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   <section class="lp-story lp-section">
     <div class="lp-inner">
       <div class="lp-story-header lp-animate">
-        <img class="lp-story-avatar" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/yachi_avatar.webp" alt="やちやち">
         <div class="lp-story-header-text"><h2>ジャズピアニストが<br>情報発信で<br><span>月収100万円</span>を超えるまで</h2></div>
       </div>
       <div class="lp-story-body lp-animate">
@@ -765,11 +764,9 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
         <div class="lp-revenue-label">その結果、<br>情報発信を始めて1年半で<br>累計売上は3,000万円超え、<br>11ヶ月目には最高月収を更新</div>
         <div class="lp-revenue-label" style="margin-top:24px;">その額なんと、</div>
       <div class="lp-revenue-number">511<span>万円</span></div>
-        <img class="lp-story-revenue-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/revenue.webp" alt="売上実績">
       </div>
       <div class="lp-story-body lp-animate">
         <p>でも正直、<br>数字はどうでもいい<br><br>僕が本当に手に入れたかったのは、<br><strong>妻と娘との時間と、<br>ピアノを弾く時間だけだ</strong></p>
-        <img class="lp-ps-evidence" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/family.webp" alt="家族との時間">
         <p>今の労働時間は、<br>1日4時間未満<br><br>それでも月収は<br>100万円を下回らない<br><br><strong>全部手に入れた</strong></p>
       </div>
       <div class="lp-story-final lp-animate">
@@ -803,26 +800,21 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
         <div class="lp-phase-num">PHASE 01</div>
         <div class="lp-phase-title">シナリオ設計（1ヶ月目）</div>
         <div class="lp-phase-desc">僕が作ったAIを使用したワークに沿い、<br>あなたの価値観・強み・顧客像を<br>明確に言語化し、<br>「誰に・何を・どの順番で」<br>届けるかを確定させる<br><br>このフェーズは、<br>本来であれば3ヶ月かかる工程だ<br><br>それをAIアシスト付きの<br>ワーク設計により、<br>1ヶ月以内で完了できる<br>構成に再設計した<br><br>考えるのはあなた自身<br><br>でも、<br>「何を書けばいいか分からない」で<br>手が止まることがないよう、<br>AIが壁打ち相手として常に隣にいる<br><br>もちろん、<br>最終チェックは僕が直接行う</div>
-        <div class="lp-phase-result">→ 発信の軸が決まり、<br>　届ける相手が明確になる</div>
-        <img class="lp-phase-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/phase1.webp" alt="PHASE 01">
-        <img class="lp-phase-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/phase1_2.webp" alt="PHASE 01 詳細" style="margin-top:12px;">
+        <div class="lp-phase-result">→発信の軸が決まり、<br>　届ける相手が明確になる</div>
       </div>
 
       <div class="lp-phase lp-animate">
         <div class="lp-phase-num">PHASE 02</div>
         <div class="lp-phase-title">収益化（2ヶ月目）</div>
         <div class="lp-phase-desc">確定したシナリオをもとに、<br>ステップメール・セールスレター・<br>オファー文を実際に書き上げる<br><br>このフェーズで身につくのは、<br>セールスライティングの技術そのもの<br><br>一度この書き方を覚えれば、<br>VSLの台本、有料コンテンツの原稿、<br>LPのコピーなど何にでも応用が効く<br><br>書いたものはすべて僕が添削し、<br>「売れる形」に仕上がるまで<br>何度でも修正する</div>
-        <div class="lp-phase-result">→ テコ入れが終わった後も残り続ける、<br>　一生モノのスキルが手に入る</div>
-        <img class="lp-phase-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/phase2.webp" alt="PHASE 02">
-        <img class="lp-phase-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/phase2_2.webp" alt="PHASE 02 詳細" style="margin-top:12px;">
+        <div class="lp-phase-result">→テコ入れが終わった後も残り続ける、<br>　一生モノのスキルが手に入る</div>
       </div>
 
       <div class="lp-phase lp-animate">
         <div class="lp-phase-num">PHASE 03</div>
         <div class="lp-phase-title">実践（3ヶ月目）</div>
         <div class="lp-phase-desc">完成した導線を実際に市場に出し、<br>集客→教育→販売を回す実践フェーズ<br><br>正直に言おう<br><br>一発で思うような<br>結果につながるケースは5割ほどだ<br><br>売れるかどうかは、<br>出してみて初めて分かる<br><br>だからこそ、<br>売れなかったときは<br>僕が原因を発掘し、<br>改善まで一緒に詰める<br><br>実際に、初回ローンチで<br>思うように売れなかった<br>クライアントが改善を重ねて、<br>翌月に収益化できたケースもある<br><br>大事なのは、<br>一発で当てることじゃない<br><br>修正できる環境にいることだ</div>
-        <div class="lp-phase-result">→ 自分の力で稼げた実感を手にする</div>
-        <img class="lp-phase-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/phase3.webp" alt="PHASE 03">
+        <div class="lp-phase-result">→自分の力で稼げた実感を手にする</div>
       </div>
     </div>
   </section>
@@ -875,7 +867,6 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
         <div class="lp-bonus-content">
           <h3>100万円相当のテキスト資料</h3>
           <p>メルマガ戦略・仮想敵批判マニュアル・<br>リリースポスト作成術など即戦力ノウハウを提供<br><br><span style="color:#C9A84C;font-weight:700;">→これだけで、<br>　月収30万円を達成した<br>　クライアントがいる内容</span></p>
-          <img class="lp-bonus-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/bonus1.webp" alt="ボーナス01">
         </div>
       </div>
       <div class="lp-bonus-item lp-animate">
@@ -883,7 +874,6 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
         <div class="lp-bonus-content">
           <h3>200分超の動画資料</h3>
 <p>集客自動化ロードマップ・<br>5日で32万円売った実録動画など、<br>視覚的に学べるコンテンツ<br><br><span style="color:#C9A84C;font-weight:700;">→月収3万円の初収益から、<br>　寝てる間に売れる仕組みまで</span></p>
-          <img class="lp-bonus-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/bonus2.webp" alt="ボーナス02">
         </div>
       </div>
       <div class="lp-bonus-item lp-animate">
@@ -892,7 +882,6 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
           <h3>成功事例の宝庫（添削済コンテンツ）</h3>
           <p>実際に成果を出したクライアントの<br>設計図・ステップ配信をそのまま全て公開<br><br>
 <span style="color:#C9A84C;font-weight:700;">→「売れた型」を、<br>　そのまま自分に当てはめるだけ</span></p>
-          <img class="lp-bonus-img" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/bonus3.webp" alt="ボーナス03">
         </div>
       </div>
     </div>
@@ -1071,7 +1060,6 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   <section class="lp-ps lp-section">
     <div class="lp-inner">
       <div class="lp-ps-header lp-animate">
-        <img class="lp-ps-avatar" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/yachi_avatar.webp" alt="やちやち">
         <div>
           <div class="lp-section-label" style="margin-bottom:8px;">P.S.</div>
           <h2>追伸</h2>
@@ -1082,12 +1070,8 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
         <p>僕が見たいのは、<br>あなたの「収益」ではなく<br><strong>「成長」</strong>です</p>
         <p>学びました、稼げました<br><br>でも、<br>サポートが終わった途端に<br>稼げなくなってしまう<br><br>そんな他社サービスを、<br>これまでイヤというほど見てきました</p>
         <p>当然、収益は出させます<br><br>でもそれだけでは<br>終わらせたくありません<br><br>だからこそテコ入れは、<br><strong>サポート期間後から自走できる</strong><br>カリキュラムを設計しています</p>
-        <img class="lp-ps-evidence" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/support_example.webp" alt="サポート事例">
         <div class="lp-ps-emphasis">僕のことを、<br>あなたの依存先にはさせません<br><br>それが僕の仕事であり、<br>唯一のプライドです</div>
         <p>そしてもう一つ</p>
-        <div style="text-align:center;margin:40px 0;">
-          <img class="lp-ps-evidence" src="https://yachi-maga.com/backnumber/lp/tekoire_5th/img/piano.webp" alt="演奏" style="max-width:320px;border-radius:50%;margin:0 auto;">
-        </div>
         <p>僕はミュージシャンとして、<br>10年以上ステージに立っている人間です</p>
         <p>コンサートには、<br>「この1回でお客様の心を掴む」<br>という緊張感があります<br><br>リハーサルはやり直せても、<br>本番はやり直せない<br><br>コンサルも<br>同じだと思っています</p>
         <p>だからこそ、<br>あなたのシナリオに<br>赤ペンを入れまくります<br><br>「ここ全部書き直し」<br>と、突き返すこともあります<br><br>甘やかしたところで、<br><strong>あなたの口座に1円も振り込まれない</strong></p>
