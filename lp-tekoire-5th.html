@@ -351,16 +351,22 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   .lp-fr-v { top: 24px; bottom: 24px; }
   .lp-fr-t { top: 24px; } .lp-fr-b { bottom: 24px; }
   .lp-fr-l { left: 24px; } .lp-fr-r { right: 24px; }
-  .lp-amb { inset: 0; height: auto; }
+  .lp-amb { inset: 0 !important; height: auto !important; }
   .lp-amb-light {
     background:
       radial-gradient(ellipse 30% 22% at 50% 25%, rgba(201,168,76,0.22) 0%, transparent 60%),
       radial-gradient(ellipse 20% 15% at 50% 24%, rgba(245,236,205,0.07) 0%, transparent 40%),
       radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),
       radial-gradient(ellipse 30% 40% at 8% 45%, rgba(201,168,76,0.03) 0%, transparent 60%),
-      radial-gradient(ellipse 30% 40% at 92% 45%, rgba(201,168,76,0.03) 0%, transparent 60%);
+      radial-gradient(ellipse 30% 40% at 92% 45%, rgba(201,168,76,0.03) 0%, transparent 60%) !important;
   }
-  .lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 25%, transparent 10%, #030303 100%); }
+  .lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 25%, transparent 10%, #030303 100%) !important; }
+  .lp-hero-scene { padding: 64px 20px 40px !important; }
+  .lp-hero-badge-new { margin-bottom: 40px !important; }
+  .lp-hl-block { margin-bottom: 40px !important; }
+  .lp-hero-sub { margin-bottom: 56px !important; }
+  .lp-hero-brand-wrap { margin-bottom: 72px !important; }
+  .lp-hero-cards { margin-bottom: 48px !important; }
 }
 @media (max-width: 480px) {
   .lp-hl-num { font-size: clamp(28px, 10vw, 42px); }
@@ -575,15 +581,15 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 <div class="lp-curtain-line"></div>
 
 <!-- ====== HERO ====== -->
-<section class="lp-hero-scene">
-  <div class="lp-amb lp-amb-light"></div>
-  <div class="lp-amb lp-amb-vig"></div>
+<section class="lp-hero-scene" style="padding:120px 24px 48px">
+  <div class="lp-amb lp-amb-light" style="inset:0 0 auto 0;height:100vh;background:radial-gradient(ellipse 50% 40% at 50% 50%, rgba(201,168,76,0.22) 0%, transparent 60%),radial-gradient(ellipse 35% 28% at 50% 48%, rgba(245,236,205,0.07) 0%, transparent 40%),radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),radial-gradient(ellipse 30% 40% at 8% 45%, rgba(201,168,76,0.03) 0%, transparent 60%),radial-gradient(ellipse 30% 40% at 92% 45%, rgba(201,168,76,0.03) 0%, transparent 60%)"></div>
+  <div class="lp-amb lp-amb-vig" style="inset:0 0 auto 0;height:100vh;background:radial-gradient(ellipse 55% 50% at 50% 50%, transparent 10%, #030303 100%)"></div>
   <div class="lp-amb-grain"></div>
   <div class="lp-bg-brand">TEKOIRE</div>
-  <div class="lp-fr lp-fr-h lp-fr-t"></div>
-  <div class="lp-fr lp-fr-h lp-fr-b"></div>
-  <div class="lp-fr lp-fr-v lp-fr-l"></div>
-  <div class="lp-fr lp-fr-v lp-fr-r"></div>
+  <div class="lp-fr lp-fr-h lp-fr-t" style="top:24px"></div>
+  <div class="lp-fr lp-fr-h lp-fr-b" style="bottom:24px"></div>
+  <div class="lp-fr lp-fr-v lp-fr-l" style="left:24px;top:24px;bottom:24px"></div>
+  <div class="lp-fr lp-fr-v lp-fr-r" style="right:24px;top:24px;bottom:24px"></div>
   <div class="lp-pts">
     <div class="lp-pt"></div><div class="lp-pt"></div><div class="lp-pt"></div>
     <div class="lp-pt"></div><div class="lp-pt"></div><div class="lp-pt"></div>
@@ -591,25 +597,25 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
     <div class="lp-pt"></div><div class="lp-pt"></div><div class="lp-pt"></div>
   </div>
   <div class="lp-hero-content">
-    <div class="lp-hero-badge-new">
+    <div class="lp-hero-badge-new" style="margin-bottom:48px">
       <div class="lp-hero-badge-line"></div>
       <div class="lp-hero-badge-text">2日間・5名限定</div>
       <div class="lp-hero-badge-line"></div>
     </div>
-    <div class="lp-hl-block">
+    <div class="lp-hl-block" style="margin-bottom:48px">
       <div class="lp-hl-line lp-hl-line-1">ジャズピアニストがたった1年半で</div>
       <div class="lp-hl-line lp-hl-line-2">累計<span class="lp-hl-num">3,000</span>万円を売り上げた</div>
       <div class="lp-hl-line lp-hl-line-3"><em>シナリオ設計</em>の全貌を公開</div>
     </div>
-    <div class="lp-hero-sub">あなたが3ヶ月後<br>自分の力で<br>収益を手にするための手紙</div>
-    <div class="lp-hero-brand-wrap">
+    <div class="lp-hero-sub" style="margin-bottom:40px">あなたが3ヶ月後<br>自分の力で<br>収益を手にするための手紙</div>
+    <div class="lp-hero-brand-wrap" style="margin-bottom:40px">
       <div class="lp-hero-brand-box">
         <div class="lp-hero-brand-box-inner">
           <div class="lp-hero-brand-name">TEKOIRE<span class="lp-hero-brand-ed">5th Lite</span></div>
         </div>
       </div>
     </div>
-    <div class="lp-hero-cards">
+    <div class="lp-hero-cards" style="margin:0 auto 48px">
       <div class="lp-hero-card"><div class="lp-hero-card-in"><p>なぜ顔出しも声出しもせず<br>1日1時間の作業で<br>収益化まで持っていけるのか</p></div></div>
       <div class="lp-hero-card"><div class="lp-hero-card-in"><p>なぜテコ入れ参加者の<br>収益化が<br>22人中20人に到達したのか</p></div></div>
     </div>
