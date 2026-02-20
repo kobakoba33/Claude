@@ -166,15 +166,15 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 .lp-hero-scene {
   min-height: 100vh; position: relative; overflow: hidden;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  background: #030303; padding: 100px 24px 60px;
+  background: #030303; padding: 120px 24px 48px;
 }
 .lp-hero-scene::after { display: none; }
-.lp-amb { position: absolute; inset: 0; pointer-events: none; }
+.lp-amb { position: absolute; inset: 0 0 auto 0; height: 100vh; pointer-events: none; }
 .lp-amb-light {
   background:
-    radial-gradient(ellipse 30% 22% at 50% 25%, rgba(201,168,76,0.22) 0%, transparent 60%),
-    radial-gradient(ellipse 20% 15% at 50% 24%, rgba(245,236,205,0.07) 0%, transparent 40%),
-    radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(201,168,76,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 28% at 50% 48%, rgba(245,236,205,0.07) 0%, transparent 40%),
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),
     radial-gradient(ellipse 30% 40% at 8% 45%, rgba(201,168,76,0.03) 0%, transparent 60%),
     radial-gradient(ellipse 30% 40% at 92% 45%, rgba(201,168,76,0.03) 0%, transparent 60%);
 }
@@ -207,7 +207,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   background: linear-gradient(90deg, rgba(201,168,76,0.5), transparent) !important;
 }
 @keyframes lpAmbBreathe { 0%,100%{opacity:.85}50%{opacity:1} }
-.lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 25%, transparent 10%, #030303 100%); }
+.lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 50%, transparent 10%, #030303 100%); }
 .lp-amb-grain {
   position: absolute; top: -100%; left: -100%; width: 300%; height: 300%;
   opacity: 0.025; pointer-events: none;
@@ -226,19 +226,19 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 }
 @keyframes lpBgT { 0%,100%{opacity:.6;filter:blur(.5px)}50%{opacity:1;filter:blur(0)} }
 .lp-fr { position: absolute; z-index: 5; }
-.lp-fr-h { left: 48px; right: 48px; height: 1px;
+.lp-fr-h { left: 24px; right: 24px; height: 1px;
   background: linear-gradient(90deg, transparent 5%, rgba(201,168,76,0.4) 35%, rgba(232,212,139,0.6) 50%, rgba(201,168,76,0.4) 65%, transparent 95%);
   background-size: 200% 100%;
 }
-.lp-fr-t { top: 48px; animation: lpFrH 7s ease-in-out infinite; }
-.lp-fr-b { bottom: 48px; animation: lpFrH 7s ease-in-out infinite reverse; }
+.lp-fr-t { top: 24px; animation: lpFrH 7s ease-in-out infinite; }
+.lp-fr-b { bottom: 24px; animation: lpFrH 7s ease-in-out infinite reverse; }
 @keyframes lpFrH { 0%{background-position:-200% 0}100%{background-position:200% 0} }
-.lp-fr-v { top: 48px; bottom: 48px; width: 1px;
+.lp-fr-v { top: 24px; bottom: 24px; width: 1px;
   background: linear-gradient(180deg, transparent 5%, rgba(201,168,76,0.4) 35%, rgba(232,212,139,0.6) 50%, rgba(201,168,76,0.4) 65%, transparent 95%);
   background-size: 100% 200%;
 }
-.lp-fr-l { left: 48px; animation: lpFrV 7s ease-in-out infinite; }
-.lp-fr-r { right: 48px; animation: lpFrV 7s ease-in-out infinite reverse; }
+.lp-fr-l { left: 24px; animation: lpFrV 7s ease-in-out infinite; }
+.lp-fr-r { right: 24px; animation: lpFrV 7s ease-in-out infinite reverse; }
 @keyframes lpFrV { 0%{background-position:0 -200%}100%{background-position:0 200%} }
 .lp-pts { position: absolute; inset: 0; pointer-events: none; z-index: 3; overflow: hidden; }
 .lp-pt { position: absolute; border-radius: 50%; background: radial-gradient(circle, rgba(232,212,139,0.9), rgba(201,168,76,0.6)); box-shadow: 0 0 6px rgba(201,168,76,0.3); }
@@ -258,7 +258,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 .lp-pt:nth-child(11){width:2px;height:2px;bottom:60%;right:45%;animation:lpD2 24s ease-in-out infinite 10s}
 .lp-pt:nth-child(12){width:3px;height:3px;bottom:55%;left:72%;animation:lpD3 15s ease-in-out infinite 4s}
 .lp-hero-content { max-width: 780px; margin: 0 auto; position: relative; z-index: 6; text-align: center; }
-.lp-hero-badge-new { display: flex; align-items: center; justify-content: center; gap: 24px; margin-bottom: 100px; opacity: 0; animation: lpRevealUp 0.8s ease 1.6s forwards; }
+.lp-hero-badge-new { display: flex; align-items: center; justify-content: center; gap: 24px; margin-bottom: 48px; opacity: 0; animation: lpRevealUp 0.8s ease 1.6s forwards; }
 .lp-hero-badge-line { width: 64px; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5)); }
 .lp-hero-badge-line:last-child { background: linear-gradient(90deg, rgba(201,168,76,0.5), transparent); }
 .lp-hero-badge-text {
@@ -272,7 +272,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 @keyframes lpRevealBlur { from{opacity:0;transform:translateY(20px);filter:blur(8px)}to{opacity:1;transform:translateY(0);filter:blur(0)} }
 @keyframes lpMetalFlow { 0%{background-position:-200% center}100%{background-position:200% center} }
 @keyframes lpBorderShift { 0%{background-position:0% 0%}50%{background-position:100% 100%}100%{background-position:0% 0%} }
-.lp-hl-block { margin-bottom: 100px; text-align: center; }
+.lp-hl-block { margin-bottom: 48px; text-align: center; }
 .lp-hl-line {
   display: block;
   font-size: clamp(17px, 3.8vw, 27px);
@@ -312,8 +312,8 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   filter: drop-shadow(0 0 24px rgba(201,168,76,0.35)) drop-shadow(0 0 48px rgba(201,168,76,0.1));
 }
 .lp-hl-num { line-height: 1.2; }
-.lp-hero-sub { font-size: clamp(13px, 2.4vw, 16px); font-weight: 300; line-height: 2.6; color: #c2b9ab; letter-spacing: 0.06em; margin-bottom: 64px; opacity: 0; animation: lpRevealBlur 1s ease 3.1s forwards; }
-.lp-hero-brand-wrap { margin-bottom: 64px; opacity: 0; animation: lpRevealBlur 1.2s ease 3.4s forwards; }
+.lp-hero-sub { font-size: clamp(13px, 2.4vw, 16px); font-weight: 300; line-height: 2.6; color: #c2b9ab; letter-spacing: 0.06em; margin-bottom: 40px; opacity: 0; animation: lpRevealBlur 1s ease 3.1s forwards; }
+.lp-hero-brand-wrap { margin-bottom: 40px; opacity: 0; animation: lpRevealBlur 1.2s ease 3.4s forwards; }
 .lp-hero-brand-box { display: inline-block; position: relative; padding: 32px 72px; }
 .lp-hero-brand-box::before, .lp-hero-brand-box::after { content: ''; position: absolute; left: 0; right: 0; }
 .lp-hero-brand-box::before { top: 0; height: 1px; background: linear-gradient(90deg, transparent, #8B7028, #E8D48B, #8B7028, transparent); }
@@ -324,7 +324,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 .lp-hero-brand-box-inner::after { bottom: -5px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent); }
 .lp-hero-brand-name { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 6vw, 56px); font-weight: 600; letter-spacing: 0.2em; background: linear-gradient(135deg, #6B5520 0%, #C9A84C 20%, #F5ECCD 35%, #E8D48B 50%, #C9A84C 65%, #F5ECCD 80%, #8B7028 100%); background-size: 250% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: lpMetalFlow 6s linear infinite; filter: drop-shadow(0 0 20px rgba(201,168,76,0.12)); line-height: 1.3; }
 .lp-hero-brand-ed { display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(14px, 2.8vw, 22px); font-weight: 300; letter-spacing: 0.5em; color: rgba(201,168,76,0.6); margin-top: 4px; }
-.lp-hero-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 720px; width: 100%; margin: 0 auto 80px; opacity: 0; animation: lpRevealUp 0.8s ease 3.7s forwards; }
+.lp-hero-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 720px; width: 100%; margin: 0 auto 48px; opacity: 0; animation: lpRevealUp 0.8s ease 3.7s forwards; }
 .lp-hero-card { position: relative; padding: 1px; border-radius: 1px; background: linear-gradient(135deg, rgba(201,168,76,0.4) 0%, rgba(201,168,76,0.05) 25%, rgba(232,212,139,0.3) 50%, rgba(201,168,76,0.05) 75%, rgba(201,168,76,0.4) 100%); background-size: 300% 300%; animation: lpBorderShift 10s ease-in-out infinite; transition: box-shadow 0.5s ease, transform 0.3s ease; }
 .lp-hero-card:nth-child(2) { animation-delay: -5s; }
 .lp-hero-card:hover { box-shadow: 0 8px 40px rgba(201,168,76,0.08), 0 0 60px rgba(201,168,76,0.03); transform: translateY(-2px); }
@@ -351,40 +351,23 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   .lp-fr-v { top: 24px; bottom: 24px; }
   .lp-fr-t { top: 24px; } .lp-fr-b { bottom: 24px; }
   .lp-fr-l { left: 24px; } .lp-fr-r { right: 24px; }
+  .lp-amb { inset: 0; height: auto; }
+  .lp-amb-light {
+    background:
+      radial-gradient(ellipse 30% 22% at 50% 25%, rgba(201,168,76,0.22) 0%, transparent 60%),
+      radial-gradient(ellipse 20% 15% at 50% 24%, rgba(245,236,205,0.07) 0%, transparent 40%),
+      radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),
+      radial-gradient(ellipse 30% 40% at 8% 45%, rgba(201,168,76,0.03) 0%, transparent 60%),
+      radial-gradient(ellipse 30% 40% at 92% 45%, rgba(201,168,76,0.03) 0%, transparent 60%);
+  }
+  .lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 25%, transparent 10%, #030303 100%); }
 }
 @media (max-width: 480px) {
   .lp-hl-num { font-size: clamp(28px, 10vw, 42px); }
   .lp-hero-brand-name { letter-spacing: 0.12em; }
 }
 
-/* ===== DESKTOP HERO SPACING ===== */
-@media (min-width: 769px) {
-  .lp-hero-scene { padding: 120px 24px 48px !important; }
-  .lp-hero-badge-new { margin-bottom: 48px !important; }
-  .lp-hl-block { margin-bottom: 48px !important; }
-  .lp-hero-sub { margin-bottom: 40px !important; }
-  .lp-hero-brand-wrap { margin-bottom: 40px !important; }
-  .lp-hero-cards { margin: 0 auto 48px !important; }
-  .lp-fr-h { left: 24px !important; right: 24px !important; }
-  .lp-fr-t { top: 24px !important; }
-  .lp-fr-b { bottom: 24px !important; }
-  .lp-fr-v { top: 24px !important; bottom: 24px !important; }
-  .lp-fr-l { left: 24px !important; }
-  .lp-fr-r { right: 24px !important; }
-  .lp-amb.lp-amb-light, .lp-amb.lp-amb-vig {
-    inset: 0 0 auto 0 !important;
-    height: 100vh !important;
-  }
-  .lp-amb.lp-amb-light {
-    background:
-      radial-gradient(ellipse 50% 40% at 50% 50%, rgba(201,168,76,0.22) 0%, transparent 60%),
-      radial-gradient(ellipse 35% 28% at 50% 48%, rgba(245,236,205,0.07) 0%, transparent 40%),
-      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),
-      radial-gradient(ellipse 30% 40% at 8% 45%, rgba(201,168,76,0.03) 0%, transparent 60%),
-      radial-gradient(ellipse 30% 40% at 92% 45%, rgba(201,168,76,0.03) 0%, transparent 60%) !important;
-  }
-  .lp-amb.lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 50%, transparent 10%, #030303 100%) !important; }
-}
+/* Desktop hero values are now in base CSS; mobile overrides in max-width:768px */
 
 /* ===== CLIENT RESULTS ===== */
 .lp-results { background: #0a0a0a; padding: var(--section-padding); padding-top: 64px; }
