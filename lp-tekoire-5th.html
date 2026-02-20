@@ -172,12 +172,11 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 .lp-amb { position: absolute; inset: 0; pointer-events: none; }
 .lp-amb-light {
   background:
-    radial-gradient(ellipse 35% 30% at 50% 35%, rgba(201,168,76,0.22) 0%, transparent 60%),
-    radial-gradient(ellipse 20% 18% at 50% 33%, rgba(245,236,205,0.07) 0%, transparent 40%),
+    radial-gradient(ellipse 30% 22% at 50% 25%, rgba(201,168,76,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 20% 15% at 50% 24%, rgba(245,236,205,0.07) 0%, transparent 40%),
     radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),
     radial-gradient(ellipse 30% 40% at 8% 45%, rgba(201,168,76,0.03) 0%, transparent 60%),
     radial-gradient(ellipse 30% 40% at 92% 45%, rgba(201,168,76,0.03) 0%, transparent 60%);
-  animation: lpAmbBreathe 12s ease-in-out infinite;
 }
 .lp-hero-content,
 .lp-hero-content * {
@@ -208,7 +207,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   background: linear-gradient(90deg, rgba(201,168,76,0.5), transparent) !important;
 }
 @keyframes lpAmbBreathe { 0%,100%{opacity:.85}50%{opacity:1} }
-.lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 40%, transparent 10%, #030303 100%); }
+.lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 25%, transparent 10%, #030303 100%); }
 .lp-amb-grain {
   position: absolute; top: -100%; left: -100%; width: 300%; height: 300%;
   opacity: 0.025; pointer-events: none;
@@ -274,18 +273,29 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 @keyframes lpMetalFlow { 0%{background-position:-200% center}100%{background-position:200% center} }
 @keyframes lpBorderShift { 0%{background-position:0% 0%}50%{background-position:100% 100%}100%{background-position:0% 0%} }
 .lp-hl-block { margin-bottom: 100px; text-align: center; }
-.lp-hl-line { font-size: clamp(17px, 3.8vw, 27px); font-weight: 700; line-height: 2.4; letter-spacing: 0.04em; opacity: 0; animation: lpRevealBlur 1s cubic-bezier(0.22,0.61,0.36,1) forwards; }
+.lp-hl-line {
+  display: block;
+  font-size: clamp(17px, 3.8vw, 27px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  opacity: 0;
+  animation: lpRevealBlur 1s cubic-bezier(0.22,0.61,0.36,1) forwards;
+}
+.lp-hl-line:last-child {
+  margin-bottom: 0;
+}
+.lp-hl-line:nth-child(2) {
+  margin-top: -8px;
+  margin-bottom: 18px;
+}
 .lp-hl-line-1 { animation-delay: 1.9s; }
 .lp-hl-line-2 { animation-delay: 2.3s; }
 .lp-hl-line-3 { animation-delay: 2.7s; }
 .lp-hl-line em {
   font-style: normal;
-  background: linear-gradient(135deg, #E8D48B, #C9A84C, #8B7028) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  filter: drop-shadow(0 0 10px rgba(201,168,76,0.25));
+  color: #f0ece4;
 }
 .lp-hl-num {
   font-family: 'Playfair Display', serif;
@@ -301,6 +311,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   animation: lpMetalFlow 5s linear infinite !important;
   filter: drop-shadow(0 0 24px rgba(201,168,76,0.35)) drop-shadow(0 0 48px rgba(201,168,76,0.1));
 }
+.lp-hl-num { line-height: 1.2; }
 .lp-hero-sub { font-size: clamp(13px, 2.4vw, 16px); font-weight: 300; line-height: 2.6; color: #c2b9ab; letter-spacing: 0.06em; margin-bottom: 64px; opacity: 0; animation: lpRevealBlur 1s ease 3.1s forwards; }
 .lp-hero-brand-wrap { margin-bottom: 64px; opacity: 0; animation: lpRevealBlur 1.2s ease 3.4s forwards; }
 .lp-hero-brand-box { display: inline-block; position: relative; padding: 32px 72px; }
