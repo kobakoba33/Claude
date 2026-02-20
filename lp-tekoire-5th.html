@@ -1152,4 +1152,44 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   }
   setTimeout(animate, 3400);
 })();
+// DESKTOP OVERRIDE (WordPress strips inline styles & ignores min-width queries)
+(function(){
+  if (window.innerWidth < 769) return;
+  var s = function(sel, props) {
+    var el = document.querySelector(sel);
+    if (!el) return;
+    for (var k in props) el.style.setProperty(k, props[k], 'important');
+  };
+  s('.lp-hero-scene', {'padding': '120px 24px 48px'});
+  s('.lp-hero-badge-new', {'margin-bottom': '48px'});
+  s('.lp-hl-block', {'margin-bottom': '48px'});
+  s('.lp-hero-sub', {'margin-bottom': '40px'});
+  s('.lp-hero-brand-wrap', {'margin-bottom': '40px'});
+  s('.lp-hero-cards', {'margin': '0 auto 48px'});
+  s('.lp-fr-t', {'top': '24px'});
+  s('.lp-fr-b', {'bottom': '24px'});
+  s('.lp-fr-l', {'left': '24px', 'top': '24px', 'bottom': '24px'});
+  s('.lp-fr-r', {'right': '24px', 'top': '24px', 'bottom': '24px'});
+  // Backlight: constrain to viewport, center on "自分の力で"
+  var light = document.querySelector('.lp-amb-light');
+  var vig = document.querySelector('.lp-amb-vig');
+  if (light) {
+    light.style.setProperty('inset', '0 0 auto 0', 'important');
+    light.style.setProperty('height', '100vh', 'important');
+    light.style.setProperty('background',
+      'radial-gradient(ellipse 50% 40% at 50% 50%, rgba(201,168,76,0.22) 0%, transparent 60%),' +
+      'radial-gradient(ellipse 35% 28% at 50% 48%, rgba(245,236,205,0.07) 0%, transparent 40%),' +
+      'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 50%),' +
+      'radial-gradient(ellipse 30% 40% at 8% 45%, rgba(201,168,76,0.03) 0%, transparent 60%),' +
+      'radial-gradient(ellipse 30% 40% at 92% 45%, rgba(201,168,76,0.03) 0%, transparent 60%)',
+      'important');
+  }
+  if (vig) {
+    vig.style.setProperty('inset', '0 0 auto 0', 'important');
+    vig.style.setProperty('height', '100vh', 'important');
+    vig.style.setProperty('background',
+      'radial-gradient(ellipse 55% 50% at 50% 50%, transparent 10%, #030303 100%)',
+      'important');
+  }
+})();
 </script>
