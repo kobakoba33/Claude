@@ -166,14 +166,14 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 .lp-hero-scene {
   min-height: 100vh; position: relative; overflow: hidden;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  background: #030303; padding: 120px 24px 48px !important;
+  background: #030303; padding: 72px 24px 48px !important;
 }
 .lp-hero-scene::after { display: none; }
 .lp-amb { position: absolute !important; inset: 0 0 auto 0 !important; height: 100vh !important; pointer-events: none !important; }
 .lp-amb-light {
   background:
-    radial-gradient(ellipse 50% 40% at 50% 51%, rgba(201,168,76,0.22) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 28% at 50% 49%, rgba(245,236,205,0.07) 0%, transparent 40%),
+    radial-gradient(ellipse 50% 40% at 50% 44%, rgba(201,168,76,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 35% 28% at 50% 42%, rgba(245,236,205,0.07) 0%, transparent 40%),
     radial-gradient(ellipse 80% 50% at 50% 1%, rgba(201,168,76,0.05) 0%, transparent 50%),
     radial-gradient(ellipse 30% 40% at 8% 46%, rgba(201,168,76,0.03) 0%, transparent 60%),
     radial-gradient(ellipse 30% 40% at 92% 46%, rgba(201,168,76,0.03) 0%, transparent 60%) !important;
@@ -207,7 +207,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   background: linear-gradient(90deg, rgba(201,168,76,0.5), transparent) !important;
 }
 @keyframes lpAmbBreathe { 0%,100%{opacity:.85}50%{opacity:1} }
-.lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 51%, transparent 10%, #030303 100%) !important; }
+.lp-amb-vig { background: radial-gradient(ellipse 55% 50% at 50% 44%, transparent 10%, #030303 100%) !important; }
 .lp-amb-grain {
   position: absolute; top: -100%; left: -100%; width: 300%; height: 300%;
   opacity: 0.025; pointer-events: none;
@@ -312,7 +312,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   filter: drop-shadow(0 0 24px rgba(201,168,76,0.35)) drop-shadow(0 0 48px rgba(201,168,76,0.1));
 }
 .lp-hl-num { line-height: 1.2; }
-.lp-hero-sub { font-size: clamp(13px, 2.4vw, 16px); font-weight: 300; line-height: 2.6; color: #c2b9ab; letter-spacing: 0.06em; margin-bottom: 35px !important; opacity: 0; animation: lpRevealBlur 1s ease 3.1s forwards; }
+.lp-hero-sub { font-size: clamp(13px, 2.4vw, 16px); font-weight: 300; line-height: 2.6; color: #c2b9ab; letter-spacing: 0.06em; margin-bottom: 48px !important; opacity: 0; animation: lpRevealBlur 1s ease 3.1s forwards; }
 .lp-hero-brand-wrap { margin-bottom: 48px !important; opacity: 0; animation: lpRevealBlur 1.2s ease 3.4s forwards; }
 .lp-hero-brand-box { display: inline-block; position: relative; padding: 32px 72px; }
 .lp-hero-brand-box::before, .lp-hero-brand-box::after { content: ''; position: absolute; left: 0; right: 0; }
@@ -342,7 +342,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   .lp-hl-block { margin-bottom: 40px; }
   .lp-hero-cards { grid-template-columns: 1fr; gap: 16px; max-width: 400px; margin-bottom: 48px; }
   .lp-hero-card-in { padding: 32px 24px 28px; }
-  .lp-hero-sub { margin-bottom: 30px; }
+  .lp-hero-sub { margin-bottom: 40px; }
   .lp-hero-brand-wrap { margin-bottom: 40px; }
   .lp-hero-brand-box { padding: 24px 40px; }
   .lp-hero-arrow-new { margin-top: 40px; }
@@ -364,7 +364,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
   .lp-hero-scene { padding: 64px 20px 40px !important; }
   .lp-hero-badge-new { margin-bottom: 40px !important; }
   .lp-hl-block { margin-bottom: 40px !important; }
-  .lp-hero-sub { margin-bottom: 30px !important; }
+  .lp-hero-sub { margin-bottom: 40px !important; }
   .lp-hero-brand-wrap { margin-bottom: 40px !important; }
   .lp-hero-brand-box { padding: 24px 40px !important; }
   .lp-hero-cards { margin-bottom: 48px !important; }
@@ -582,9 +582,9 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 <div class="lp-curtain-line"></div>
 
 <!-- ====== HERO ====== -->
-<section class="lp-hero-scene" style="padding:120px 24px 48px">
-  <div class="lp-amb lp-amb-light" style="inset:0 0 auto 0;height:100vh;background:radial-gradient(ellipse 50% 40% at 50% 51%, rgba(201,168,76,0.22) 0%, transparent 60%),radial-gradient(ellipse 35% 28% at 50% 49%, rgba(245,236,205,0.07) 0%, transparent 40%),radial-gradient(ellipse 80% 50% at 50% 1%, rgba(201,168,76,0.05) 0%, transparent 50%),radial-gradient(ellipse 30% 40% at 8% 46%, rgba(201,168,76,0.03) 0%, transparent 60%),radial-gradient(ellipse 30% 40% at 92% 46%, rgba(201,168,76,0.03) 0%, transparent 60%)"></div>
-  <div class="lp-amb lp-amb-vig" style="inset:0 0 auto 0;height:100vh;background:radial-gradient(ellipse 55% 50% at 50% 51%, transparent 10%, #030303 100%)"></div>
+<section class="lp-hero-scene" style="padding:72px 24px 48px">
+  <div class="lp-amb lp-amb-light" style="inset:0 0 auto 0;height:100vh;background:radial-gradient(ellipse 50% 40% at 50% 44%, rgba(201,168,76,0.22) 0%, transparent 60%),radial-gradient(ellipse 35% 28% at 50% 42%, rgba(245,236,205,0.07) 0%, transparent 40%),radial-gradient(ellipse 80% 50% at 50% 1%, rgba(201,168,76,0.05) 0%, transparent 50%),radial-gradient(ellipse 30% 40% at 8% 46%, rgba(201,168,76,0.03) 0%, transparent 60%),radial-gradient(ellipse 30% 40% at 92% 46%, rgba(201,168,76,0.03) 0%, transparent 60%)"></div>
+  <div class="lp-amb lp-amb-vig" style="inset:0 0 auto 0;height:100vh;background:radial-gradient(ellipse 55% 50% at 50% 44%, transparent 10%, #030303 100%)"></div>
   <div class="lp-amb-grain"></div>
   <div class="lp-bg-brand">TEKOIRE</div>
   <div class="lp-fr lp-fr-h lp-fr-t" style="top:24px"></div>
@@ -608,7 +608,7 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
       <div class="lp-hl-line lp-hl-line-2">累計<span class="lp-hl-num">3,000</span>万円を売り上げた</div>
       <div class="lp-hl-line lp-hl-line-3"><em>シナリオ設計</em>の全貌を公開</div>
     </div>
-    <div class="lp-hero-sub" style="margin-bottom:35px">あなたが3ヶ月後<br>自分の力で<br>収益を手にするための手紙</div>
+    <div class="lp-hero-sub" style="margin-bottom:48px">あなたが3ヶ月後<br>自分の力で<br>収益を手にするための手紙</div>
     <div class="lp-hero-brand-wrap" style="margin-bottom:48px">
       <div class="lp-hero-brand-box">
         <div class="lp-hero-brand-box-inner">
@@ -1156,48 +1156,61 @@ body .entry-content h1,body .entry-content h2,body .entry-content h3,body .entry
 // DESKTOP OVERRIDE (WordPress strips inline styles & ignores min-width queries)
 (function(){
   function applyDesktop() {
-    if (window.innerWidth < 769) { console.log('LP-DEBUG: mobile skip', window.innerWidth); return; }
-    console.log('LP-DEBUG: applying desktop overrides', window.innerWidth);
+    if (window.innerWidth < 769) return;
     var s = function(sel, props) {
       var el = document.querySelector(sel);
-      if (!el) { console.log('LP-DEBUG: not found', sel); return; }
+      if (!el) return;
       for (var k in props) el.style.setProperty(k, props[k], 'important');
     };
-    s('.lp-hero-scene', {'padding': '120px 24px 48px'});
+    s('.lp-hero-scene', {'padding': '72px 24px 48px'});
     s('.lp-hero-badge-new', {'margin-bottom': '48px'});
     s('.lp-hl-block', {'margin-bottom': '48px'});
-    s('.lp-hero-sub', {'margin-bottom': '35px'});
+    s('.lp-hero-sub', {'margin-bottom': '48px'});
     s('.lp-hero-brand-wrap', {'margin-bottom': '48px'});
     s('.lp-hero-cards', {'margin': '0 auto 48px'});
     s('.lp-fr-t', {'top': '24px'});
     s('.lp-fr-b', {'bottom': '24px'});
     s('.lp-fr-l', {'left': '24px', 'top': '24px', 'bottom': '24px'});
     s('.lp-fr-r', {'right': '24px', 'top': '24px', 'bottom': '24px'});
+    // --- Dynamic backlight alignment ---
+    var scene = document.querySelector('.lp-hero-scene');
+    var sub = document.querySelector('.lp-hero-sub');
     var light = document.querySelector('.lp-amb-light');
     var vig = document.querySelector('.lp-amb-vig');
-    if (light) {
-      light.style.setProperty('inset', '0 0 auto 0', 'important');
-      light.style.setProperty('height', '100vh', 'important');
-      light.style.setProperty('background',
-        'radial-gradient(ellipse 50% 40% at 50% 51%, rgba(201,168,76,0.22) 0%, transparent 60%),' +
-        'radial-gradient(ellipse 35% 28% at 50% 49%, rgba(245,236,205,0.07) 0%, transparent 40%),' +
-        'radial-gradient(ellipse 80% 50% at 50% 1%, rgba(201,168,76,0.05) 0%, transparent 50%),' +
-        'radial-gradient(ellipse 30% 40% at 8% 46%, rgba(201,168,76,0.03) 0%, transparent 60%),' +
-        'radial-gradient(ellipse 30% 40% at 92% 46%, rgba(201,168,76,0.03) 0%, transparent 60%)',
-        'important');
-    }
+    if (!scene || !sub || !light) return;
+    // Measure: "自分の力で" = 2nd of 3 lines in .lp-hero-sub
+    var subRect = sub.getBoundingClientRect();
+    var sceneRect = scene.getBoundingClientRect();
+    var lineH = parseFloat(getComputedStyle(sub).lineHeight) || (parseFloat(getComputedStyle(sub).fontSize) * 2.6);
+    var line2Center = subRect.top + lineH * 1.5;
+    // Position relative to scene top (ambient layer starts at scene top)
+    var vh = window.innerHeight;
+    var relScene = line2Center - sceneRect.top;
+    var pct = Math.round((relScene / vh) * 100);
+    var pct2 = pct - 2; // secondary light offset
+    console.log('LP-LIGHT: sub center=' + Math.round(line2Center) + 'px, scene top=' + Math.round(sceneRect.top) + 'px, rel=' + Math.round(relScene) + 'px, vh=' + vh + ', target=' + pct + '%');
+    light.style.setProperty('inset', '0 0 auto 0', 'important');
+    light.style.setProperty('height', '100vh', 'important');
+    light.style.setProperty('background',
+      'radial-gradient(ellipse 50% 40% at 50% ' + pct + '%, rgba(201,168,76,0.22) 0%, transparent 60%),' +
+      'radial-gradient(ellipse 35% 28% at 50% ' + pct2 + '%, rgba(245,236,205,0.07) 0%, transparent 40%),' +
+      'radial-gradient(ellipse 80% 50% at 50% 1%, rgba(201,168,76,0.05) 0%, transparent 50%),' +
+      'radial-gradient(ellipse 30% 40% at 8% 46%, rgba(201,168,76,0.03) 0%, transparent 60%),' +
+      'radial-gradient(ellipse 30% 40% at 92% 46%, rgba(201,168,76,0.03) 0%, transparent 60%)',
+      'important');
     if (vig) {
       vig.style.setProperty('inset', '0 0 auto 0', 'important');
       vig.style.setProperty('height', '100vh', 'important');
       vig.style.setProperty('background',
-        'radial-gradient(ellipse 55% 50% at 50% 51%, transparent 10%, #030303 100%)',
+        'radial-gradient(ellipse 55% 50% at 50% ' + pct + '%, transparent 10%, #030303 100%)',
         'important');
     }
-    console.log('LP-DEBUG: done');
   }
   applyDesktop();
-  setTimeout(applyDesktop, 100);
-  setTimeout(applyDesktop, 500);
-  window.addEventListener('load', applyDesktop);
+  setTimeout(applyDesktop, 200);
+  setTimeout(applyDesktop, 600);
+  setTimeout(applyDesktop, 1500);
+  window.addEventListener('load', function(){ setTimeout(applyDesktop, 100); });
+  window.addEventListener('resize', applyDesktop);
 })();
 </script>
